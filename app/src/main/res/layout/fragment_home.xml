@@ -33,13 +33,12 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.5" />
-s
+
         <com.google.android.material.imageview.ShapeableImageView
-            android:layout_width="@dimen/dimen_30"
-            android:layout_height="@dimen/dimen_30"
+            android:layout_width="@dimen/dimen_25"
+            android:layout_height="@dimen/dimen_25"
             android:src="@drawable/ic_flag"
             android:layout_marginEnd="@dimen/dimen_20"
-
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"

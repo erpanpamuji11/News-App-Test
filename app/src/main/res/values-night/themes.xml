@@ -3,5 +3,13 @@
     <style name="Base.Theme.NewsAppTest" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/blue_100</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="android:statusBarColor" >?attr/colorPrimaryVariant</item>
+    </style>
+
+    <style name="RoundedButtonShape">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item> <!-- Ubah persentase sesuai dengan keinginan Anda -->
     </style>
 </resources>

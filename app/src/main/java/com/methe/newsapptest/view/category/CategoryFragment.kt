@@ -102,10 +102,12 @@ class CategoryFragment : Fragment() {
                     newsEverythingAdapter.addLoadStateListener { loadState ->
                         if (loadState.source.refresh is LoadState.NotLoading && loadState.append.endOfPaginationReached && newsEverythingAdapter.itemCount < 1){
                             shimmerNews.stopShimmer()
+                            tvDataEmpty.visibility = View.VISIBLE
                             shimmerNews.visibility = View.INVISIBLE
                         } else {
                             shimmerNews.stopShimmer()
                             shimmerNews.visibility = View.INVISIBLE
+                            tvDataEmpty.visibility = View.GONE
                         }
                     }
                     Log.d("guys", "Success")

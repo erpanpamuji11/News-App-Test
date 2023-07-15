@@ -11,4 +11,8 @@
     <string name="science">Science</string>
     <string name="sport">Sports</string>
     <string name="techno">Techno</string>
+    <string name="detail_articles">Detail Articles</string>
+    <string name="back">back</string>
+    <string name="failed_load_data">Failed Load Data</string>
+    <string name="empty_data">Empty Data</string>
 </resources>
