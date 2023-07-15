@@ -1,14 +1,13 @@
 package com.methe.newsapptest.view.detailnews
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.methe.newsapptest.R
 import com.methe.newsapptest.databinding.FragmentDetailNewsBinding
 
 class DetailNewsFragment : Fragment() {
@@ -34,15 +33,12 @@ class DetailNewsFragment : Fragment() {
         binding.ivBack.setOnClickListener {
             findNavController().popBackStack()
         }
-        binding.webView.webViewClient = WebViewClient() // Menggunakan WebViewClient agar halaman web dibuka di WebView
-
+        binding.webView.webViewClient = WebViewClient()
         _urlNews = arguments?.getString("urlNews")
-        // Mengaktifkan JavaScript (opsional, tergantung pada kebutuhan aplikasi Anda)
         webView = WebView(requireContext())
         val settings = webView.settings
         settings.javaScriptEnabled = true
 
-        // Load halaman web
         binding.webView.loadUrl(urlNews)
 
     }

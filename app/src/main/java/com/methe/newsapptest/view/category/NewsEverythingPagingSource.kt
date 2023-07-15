@@ -25,7 +25,7 @@ class NewsEverythingPagingSource @Inject constructor(
             val response = newsApi.getEverythingNews(position, pageSize, query)
 
             return LoadResult.Page(
-                data = response.articles ?: arrayListOf(),
+                data = response.articles,
                 prevKey = if (position == 1) null else position - 1,
                 nextKey = if (position == response.totalResults) null else position + 1
             )

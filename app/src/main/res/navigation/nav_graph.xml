@@ -30,7 +30,7 @@
         tools:layout="@layout/fragment_detail_news" />
     <fragment
         android:id="@+id/splashScreenFragment"
-        android:name="com.methe.newsapptest.view.auth.SplashScreenFragment"
+        android:name="com.methe.newsapptest.view.auth.SplashFragment"
         android:label="fragment_splash_screen"
         tools:layout="@layout/fragment_splash_screen" >
         <action

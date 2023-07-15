@@ -7,7 +7,6 @@ import androidx.annotation.RequiresApi
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import coil.load
 import com.methe.newsapptest.data.remote.models.ArticlesItem
 import com.methe.newsapptest.databinding.NewsItemBinding
 import com.methe.newsapptest.utils.DateFormatter

@@ -7,16 +7,13 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import androidx.appcompat.widget.SearchView
 import androidx.core.os.bundleOf
-import androidx.core.view.isGone
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.paging.LoadState
-import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.facebook.shimmer.ShimmerFrameLayout
 import com.methe.newsapptest.R
@@ -115,21 +112,6 @@ class CategoryFragment : Fragment() {
 
                     Log.d("TAG_GET_DATA", newsEverythingAdapter.snapshot().items.toString())
 
-                }
-            }
-        }
-    }
-
-    private fun searchNewsData(query: String) {
-        rvInstance()
-        binding.apply {
-            lifecycleScope.launch {
-                newsEverythingViewModel.getNews(query).catch { e ->
-                    Log.d("cek", "dfddffd${e.message}")
-                }.collectLatest{
-                    Log.d("guys", "Success")
-                    newsEverythingAdapter.submitData(it)
-                    Log.d("TAG_GET_DATA", newsEverythingAdapter.snapshot().items.toString())
                 }
             }
         }
